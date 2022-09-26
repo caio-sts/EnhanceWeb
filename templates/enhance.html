@@ -1,26 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhancing</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+  <title>Enhancing</title>
 </head>
+
 <body>
-    <div class="row">
-        <div class="column">
-          <div>
-            <h3>Histogram Equalization</h3>
-            <img src="{{ image }}" alt="User Image"><br>
-            <a>PSNR: {{psnrHE}}</a><br>
-            <a>SSIM: {{ssimHE}}</a>
-          </div>
-          <!--<img src="rocks.jpg">-->
-          
-        </div>
-        <div class="column">
-          <!--<img src="rocks.jpg">-->
-        </div>
-        
-      </div>
+  <div style="text-align: center;">
+    <h4>Uploaded Image</h2>
+      <img src="{{image}}" alt="Uploaded image">
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <h4>Histogram Equalization</h4>
+      <img src="{{ HE }}" alt="User Image"><br>
+      <a>PSNR: {{psnrHE}}</a><br>
+      <a>SSIM: {{ssimHE}}</a>
+    </div>
+    <div class="column">
+      <h4>Dynamic Histogram Equalization</h4>
+      <img src="{{ DHE }}" alt="User Image"><br>
+      <a>PSNR: {{psnrDHE}}</a><br>
+      <a>SSIM: {{ssimDHE}}</a>
+    </div>
+    <div class="column">
+      <h4>Ying_CAIP_2017</h4>
+      <img src="{{ Ying }}" alt="User Image"><br>
+      <a>PSNR: {{psnrYing}}</a><br>
+      <a>SSIM: {{ssimYing}}</a>
+    </div>
+    <div class="column">
+      <h4>Gamma Correction</h4>
+      <img src="{{ Gamma }}" alt="User Image"><br>
+      <a>PSNR: {{psnrGamma}}</a><br>
+      <a>SSIM: {{ssimGamma}}</a>
+    </div>
+    <div class="column">
+      <h4>LIME</h4>
+      <img src="{{ Lime }}" alt="User Image"><br>
+      <a>PSNR: {{psnrLime}}</a><br>
+      <a>SSIM: {{ssimLime}}</a>
+    </div>
+    <div class="column">
+      <h4>Underwater</h4>
+      <img src="{{ Underwater }}" alt="User Image"><br>
+      <a>PSNR: {{psnrUnderwater}}</a><br>
+      <a>SSIM: {{ssimUnderwater}}</a>
+    </div>
+  </div>
 </body>
+
 </html>

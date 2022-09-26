@@ -6,7 +6,7 @@
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
 </head>
 <body>
-    <h1>Upload image to enhance</h1>
+    <h1 style="text-align: center;">Upload image to enhance</h1>
     <p>
         {% with messages = get_flashed_messages() %}
           {% if messages %}
@@ -23,7 +23,7 @@
             <img src="{{ url_for('static', filename='uploads/'+filename) }}">
         </div>
     {% endif %}
-    <div>
+    <div style="text-align: center;">
         <form method=post enctype=multipart/form-data>
             <span class="btn btn-success fileinput-button">
                 <span>Select file</span>
