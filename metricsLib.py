@@ -85,7 +85,7 @@ def PSNR(img2, MSE_value): #image quality
 from skimage.metrics import structural_similarity as ssim
 
 def SSIM(img1, img2):
-  return ssim(img1, img2, multichannel=True)
+  return ssim(img1, img2, channel_axis=-1)
   
 
 ## single image metrics ## 
